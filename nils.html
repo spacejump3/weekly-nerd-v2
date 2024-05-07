@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weekly nerd</title>
+		<link rel="stylesheet" href="styles/blog.css" />
+
+		<!-- google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="aboutme.html">About me</a></li>
+			</ul>
+		</header>
+
+		<main>
+			<details>
+				<summary>Options</summary>
+				<form>
+					<label>
+						<input id="animations" type="checkbox" />
+						Disable animations
+					</label>
+					<label>
+						<input id="light-dark-mode" type="checkbox" />
+						Dark mode
+					</label>
+				</form>
+			</details>
+
+			<section>
+				<h1>Nils Binder</h1>
+			</section>
+
+			<section>
+				<h2 id="gastspreker-4-nils-binder---6-3-2024">Gastspreker 4 Nils Binder - 6-3-2024</h2>
+				<p>Van 9elements</p>
+				<h2>3 units bij 9elements</h2>
+				<ul>
+					<li>Communication design (corporate identity - print etc. Non coding designers)</li>
+					<li>Product development (big projects - data vis, banking clients etc)</li>
+					<li>Web development (frontend, small to medium sized websites)</li>
+				</ul>
+				<p>Deze drie units werken samen om mooie projecten te realiseren.</p>
+				<h2>Wrapper element (aka container)</h2>
+				<p>A wrapper sets a:</p>
+				<ul>
+					<li>max width for the content</li>
+					<li>padding for the content</li>
+					<li>centers content</li>
+				</ul>
+				<p>Originele manier om een wrapper te stylen:</p>
+				<p>.wrapper {</p>
+				<p>max-width: 75rem;</p>
+				<p>margin: 0 auto;</p>
+				<p>max-width: 0 1.5rem;</p>
+				<p>}</p>
+				<p>Korter:</p>
+				<p>.wrapper {</p>
+				<p>width: min(100% - 3rem, 75rem)</p>
+				<p>margin-inline: auto;</p>
+				<p>}</p>
+				<p>Korter maar minder leesbaar:</p>
+				<p>.wrapper {</p>
+				<p>margin-inline: max(1.5rem, ((100% - 75rem) / 2));</p>
+				<p>}</p>
+				<p>Vroeger maakte we website layouts in photoshop. Tegenwoordig kan je dit veel beter in een software als Figma doen. Dit is omdat Figma speciaal gemaakt is voor webdesign. Dingen als layouts en shadows lijken heel erg op de manier hoe CSS het ook doet.</p>
+				<p>In Figma maken we vaste designs. Hierdoor kan je perongeluk automatisch ook statische websites maken terwijl je JUIST veel meer flexibelere websites kan maken.</p>
+				<p>In CSS you have ALOT of viewport units which you can use. In Figma theres no way to use any of these. In figma you only have pixels, % and rem.</p>
+				<h2>Optional column technique</h2>
+				<p>Je kan veel creatievere en interessante grids maken die niet altijd exact hetzelfde eruit zien op elke grootte. Met optional grids kan je extra grid cellen toevoegen die niet altijd gebruikt worden (witruimte), maar wel gebruiken KUNNEN worden. Bijvoorbeeld wanneer je de pagina groter of kleiner maakt.</p>
+				<p>Op deze website zie je een goed voorbeeld hiervan: <a href="http://dasruhrgebiet.de">dasruhrgebiet.de</a></p>
+				<p>Als je een website maakt, maak gebruik van de ruimte die je hebt! Als je een groot scherm hebt wil je gebruik maken van de extra ruimte die je hebt. Je kan bijvoorbeeld de navigation verplaatsen naar links of de headlines uitvergroten.</p>
+				<p><a href="http://bryck.com">bryck.com</a></p>
+				<h2>Korte reflectie</h2>
+			</section>
+		</main>
+
+		<footer>
+			<p>blob</p>
+		</footer>
+	</body>
+</html>

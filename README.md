@@ -42,7 +42,7 @@ Hiermee kan je elementen open en dicht laten klappen. Met de marker pseudo class
 
 Nieuw element in html om gebruikers keuzes te laten geven. Je kan dit vervangen door een alert, want een alert zorgt ervoor dat al je JavaScript wordt uitgeschakeld. Als je een dialog activeert, komt het tevoorschijn op de toplayer. Dit is voor ALLES. De toplayer is een laag boven de pagina.
 
-Een <dialog> moet je wel alles zelf maken. Een sluitknop staat er bijvoorbeeld niet standaard op. Die moet je allemaal zelf erin zetten. Hetzelfde geld voor positionering en andere styling. Je kan de achtergrond ook stylen met backdrop-filter. Hiermee kan je de achtergrond blurren, donkerder maken etc.
+Met een dialog moet je wel alles zelf maken. Een sluitknop staat er bijvoorbeeld niet standaard op. Die moet je allemaal zelf erin zetten. Hetzelfde geld voor positionering en andere styling. Je kan de achtergrond ook stylen met backdrop-filter. Hiermee kan je de achtergrond blurren, donkerder maken etc.
 
 **Container queries**
 

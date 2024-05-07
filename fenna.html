@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weekly nerd</title>
+		<link rel="stylesheet" href="styles/blog.css" />
+
+		<!-- google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="aboutme.html">About me</a></li>
+			</ul>
+		</header>
+
+		<main>
+			<details>
+				<summary>Options</summary>
+				<form>
+					<label>
+						<input id="animations" type="checkbox" />
+						Disable animations
+					</label>
+					<label>
+						<input id="light-dark-mode" type="checkbox" />
+						Dark mode
+					</label>
+				</form>
+			</details>
+
+			<section>
+				<h1>Fenna de Wilde</h1>
+			</section>
+
+			<section>
+				<h2 id="gastspreker-2-fenna-de-wilde---14-2-2024">Gastspreker 2 Fenna de Wilde - 14-2-2024</h2>
+				<p>Creative frontend designer</p>
+				<h2>Toegankelijkheid</h2>
+				<p>Niemand in bedrijven geeft om toegankelijkheid, ookal is het heel belangrijk.</p>
+				<p>Dingen om altijd toe te passen:</p>
+				<ul>
+					<li>focus state</li>
+					<li>aria attr</li>
+					<li>toegankelijke carrousel</li>
+					<li>focus guards</li>
+				</ul>
+				<h2>Focus state</h2>
+				<p>Met een focusstate kan je je website laten gebruiken door mensen die geen muis gebruiken. Met focus-visible registreerd alleen als je met tab iets selecteert.</p>
+				<p>Je kan een globale focus styling geven aan de hele site, en dan bij specifieke elementen een meer custom styling toe te voegen waar nodig.</p>
+				<h2>Aria attributes</h2>
+				<p>Met een aria-label kan je een soort alt tekst toevoegen aan elementen die dat niet kunnen hebben. Bijvoorbeeld een button met alleen een icoon. Met een aria-label kunnen screenreaders de button voorlezen.</p>
+				<h2>Aria-controls</h2>
+				<p>Aria-expanded geeft aan of iets open of dicht is geklapt. Denk aan bijvoorbeeld een dropdown of een hamburger menu. Het schakelt tussen twee states “true” en “false”.</p>
+				<p>Met aria-live kan je dynamische elementen laten lezen door screenreaders.</p>
+				<h2>Carrousels</h2>
+				<p>Als je de carrousel een role="region" of het element section gebruikt en een ariaroledescription=”carousel” geeft dan kan je screenreader uitlezen dat je in een carrousel bent.</p>
+				<p>Als een slide niet zichtbaar is op het scherm, moet deze verborgen wordenv oor alle gebruikers door aria-hidden=”true” aan de wrapper van de slide toe te voegen en tabindex=”1” aan alle children die focusable zijn.</p>
+				<p>Vermijdt het gebruik van li elements voor slides. De leest de screenreader eerst alle list items voor. Als je dan een paar niet zichtbaar maakt worden die niet opgelezen terwijl je dat wel wil. Gebruik iets anders (section, divs) zodat alles wel netjes wordt opgelezen.</p>
+				<p>De carousel controls moeten ook aria-labels krijgen zodat screenreaders die ook kunnen oplezen.</p>
+				<h2>Focus guards</h2>
+				<p>Zorg ervoor dat als je een dialog met een close button hebt, dat je focus niet naar de close button gaat als de dialog niet open is. Maar wanneer je via een button de dialog opent wil je dat je focus direct verandert naar de close button. Hiermee zorg je ervoor dat de gebruiker niet gedisorienteerd raakt.</p>
+				<h2>Kleurcontrast</h2>
+				<p>Zorg ervoor dat er voldoende kleurcontrast in je website zit zodat mensen met zichtproblemen je website goed kunnen gebruiken. Er zijn tools en richtlijnen om te controleren of je kleurcontrasten goed genoeg zijn. Met chrome devtools krijg je bijvoorbeeld een vinkje op een element als het voldoende kleurcontrast heeft.</p>
+				<h2>Lettergroottes</h2>
+				<p>Het is ook belangrijk de juiste lettergrootte te gebruiken om vermoeiende ogen te voorkomen. De standaardregel is om minstens 16 pixels lettergrootte te gebruiken.</p>
+				<h2>Lijnlengtes</h2>
+				<p>Voor optimale leesbaarheid is een regellengte van 50 tot 75 tekens, inclusief spaties, ideaal. Zorg ervoor dat je een maximale regellengte hebt zodat het niet stretched op een heel breed scherm.</p>
+				<h2>Alt-text</h2>
+				<p>Zorg dat je altijd een goede alt-text toevoegd aan een afbeelding.</p>
+				<h2>Semantische code</h2>
+				<p>Schrijf semantisch correcte HTML code!</p>
+				<h2>Andere dingen die je kan doen…</h2>
+				<ul>
+					<li>Skip to content button</li>
+					<li>Prefers-reduced-motion</li>
+					<li>Alle autoplay videos moeten gepauzeerd kunnen worden</li>
+					<li>Zelf een screenreader gebruiken</li>
+				</ul>
+				<h2>Korte reflectie:</h2>
+				<p>Fenna’s lezing ging volledig over toegankelijkheid en hoe je dat toepast op je websites. Ze heeft veel technieken laten zien hoe je met HTML en CSS je website een stuk toegankelijker kan maken. Op school leren we een beetje hoe je websites toegankelijk maakt, maar deze lezing ging een stuk meer in detail.</p>
+				<p>Wat ik vooral merkte was dat er veel hidden features zijn die je gewoon even moet weten om je site iets toegankelijker te maken. Bijvoorbeeld als het gaat om een focus state. Normaal gesproken gebruik je de :focus selector om je focus state te stylen. Dit is alleen niet helemaal wat je wil, omdat hij ook de focus state activeert wanneer je op je muis ergens hebt geklikt wat focusable is. Wat je eigenlijk wil is focus-visible gebruiken. Hiermee focus je alleen op dingen als je het met tab hebt geselecteerd.</p>
+				<p>Voor mij waren de aria attributes en carrousel wel het lastigst te begrijpen. Ik snap het idee van een aria attribute wel. Met een aria-label kan je bijvoorbeeld een soort alt-text toevoegen aan elk element wat je wil. Dit is een must voor buttons zonder tekst bijvoorbeeld. Maar dan heb je ook nog aria-controls, expanded en live waarvan ik niet helemaal begeep wat ze deden. Bij carrousels ging ze ook erg in detail over roles en roledescriptions, maar ik kon het na een tijdje niet echt meer volgen helaas. Als het gaat om aria-attributes moet ik zelf nog even verder gaan researchen dus.</p>
+				<p>De algemene boodschap van de lezing vond ik ook erg goed. Ze werkt in een omgeving waar toegankelijkheid een bijzaak is. Het is voor de meeste developers helaas niet heel belangrijk en bij sommige opdrachtgevers ook niet. Fenna is heeft heel veel passie voor het maken van websites waar IEDEREEN van kan genieten. Ik vind dat heel nobel en ik ben blij dat ze in deze lezing hierover kon spreken.</p>
+			</section>
+		</main>
+
+		<footer>
+			<p>blob</p>
+		</footer>
+	</body>
+</html>

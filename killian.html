@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weekly nerd</title>
+		<link rel="stylesheet" href="styles/blog.css" />
+
+		<!-- google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="aboutme.html">About me</a></li>
+			</ul>
+		</header>
+
+		<main>
+			<details>
+				<summary>Options</summary>
+				<form>
+					<label>
+						<input id="animations" type="checkbox" />
+						Disable animations
+					</label>
+					<label>
+						<input id="light-dark-mode" type="checkbox" />
+						Dark mode
+					</label>
+				</form>
+			</details>
+
+			<section>
+				<h1>Killian Valkhof</h1>
+			</section>
+
+			<section>
+				<h2 id="gastspreker-1-killian-valkhof---7-2-2024">Gastspreker 1 Killian Valkhof - 7-2-2024</h2>
+				<p>“Choose the least powerful language suitable for a given purpose”</p>
+				<p>Probeer componenten in html en css te maken zodat de browser al het werk voor je doet. Hierdoor runt je website veel sneller en werkt hij ook als de JavaScript het niet meer doet.</p>
+
+				<h2>Custom checkbox</h2>
+				<p>Focus-visible kan je gebruiken voor focus interacties zonder de muis. Focus is alleen met muis</p>
+				<p>Niet outline: none; gebruiken. Hiermee haal je de outline weg. In plaats daarvan gebruik je outline-color: transparent;. Hierdoor is de outline er nog, maar je ziet hem niet. Als je dit doet kunnen gebruikers die hoog contrast modus gebruiken nog wel de outline zien als ze dat willen.</p>
+
+				<h2>Colorpicker in de browser</h2>
+				<p>Je kan een color picker maken in html met input type="color".</p>
+				<p>Met color-scheme kan je wisselen naar dark- of lightmode. Het kan ook op basis van welke modus de gebruiker heeft in de browser.</p>
+
+				<h2>In-page transitions</h2>
+				<p>Vroeger moest je jQuery gebruiken om een smooth scroll te maken. Dit vergde veel JavaScript code. Tegenwoordig kan je in css scroll-behavior: smooth; gebruiken om dit in één regel te doen. Hiermee doe je het via de browser. Het is beter, sneller en je kan easing curves gebruiken.</p>
+				<p>Als het gaat om toegankelijkheid wil je deze smooth scroll wel uitzetten voor mensen met motion sickness. Zorg ervoor dat je standaard de smooth scroll uitzet en als je gebruiker een optie heeft om 'reduce motion' aan of uit te zetten. Daarna kan je hem aan of uit zetten op basis van of die optie is gecheckt of niet.</p>
+				<p>Met position: sticky; kan je heel bewust elementen vast laten zetten op een bepaald gedeelte in het scherm terwijl je blijft scrollen.</p>
+				<h2>Carousels</h2>
+				<p>scroll-snap-*. Hiermee kan je elementen laten snappen (in het engels). Dus als je een lijst van afbeeldingen naast elkaar hebt, kan je 1 afbeelding perfect laten snappen in het midden.</p>
+				<p><a href="http://youtu.be/34zxWFLCDlc">youtu.be/34zxWFLCDlc</a> of <a href="http://youtu.be/34zxWFLCDIc">youtu.be/34zxWFLCDIc</a> volgens mij is de link kapot 🤢</p>
+				<h2>Details en summary</h2>
+				<p>Hiermee kan je elementen open en dicht laten klappen. Met de marker pseudo class kan je het default driehoekje veranderen. Je kan de marker ook veranderen als hij open is. Met een hover erbij kan je duidelijk maken dat het een interactief element is.</p>
+				<h2>Dialog</h2>
+				<p>Nieuw element in html om gebruikers keuzes te laten geven. Je kan dit vervangen door een alert, want een alert zorgt ervoor dat al je JavaScript wordt uitgeschakeld. Als je een dialog activeert, komt het tevoorschijn op de toplayer. Dit is voor ALLES. De toplayer is een laag boven de pagina.</p>
+				<p>Met een dialog moet je wel alles zelf maken. Een sluitknop staat er bijvoorbeeld niet standaard op. Die moet je allemaal zelf erin zetten. Hetzelfde geld voor positionering en andere styling. Je kan de achtergrond ook stylen met backdrop-filter. Hiermee kan je de achtergrond blurren, donkerder maken etc.</p>
+				<h2>Container queries</h2>
+				<p>Container queriues zijn net als mediaqueries, maar ze kijken naar de breedte van de container waar het element in zit inplaats van de hele pagina.</p>
+				<h2>:has() selector</h2>
+				<p>Je kan hiermee checken of iets is aangevinkt bijvoorbeeld. Als het is aangevinkt doet het iets. Het is een soort van if else statement van JS in CSS. Meer hier te lezen: <a href="https://polypane.app/where-is-has/">https://polypane.app/where-is-has/</a></p>
+				<h2>Stop using JS in the future…</h2>
+				<p>Dit zijn een aantal features die nog niet helemaal klaar zijn, maar in de toekomst hopelijk overal supported is.</p>
+				<ul>
+					<li>Met field-sizing kan je een input of textarea breder/groter maken op basis van de hoeveelheid tekst.</li>
+					<li>Met grid-template-rows: masonry; kan je een grid maken kan je een grid maken en elementen automatisch laten vullen. Je kan zien hoe het wordt gebruikt op de Pinterest website.</li>
+					<li>Met selectlist kan je alles aanpassen aan een dropdown menu. Je kan bij wijze van zelf een grid maken als het de selectlist open klapt.</li>
+					<li>Scroll driven animations. Hiermee kan je zonder JavaScript dingen laten doen op basis van de scroll positie. Je kan dus rechtsboven scrollen, en linksonder iets laten animeren.</li>
+				</ul>
+
+				<h2>Korte reflectie</h2>
+				<p>Het eerste wat ik dacht na deze lezing was: “holy shit!”. Ik hoorde hiervoor al dat developers heel graag naar een conferentie willen gaan waar Killian spreekt, en ik begrijp dat nu volledig. Ik vond de informatie die hij met ons deelde extreem waardevol en ook een hele goede boodschap.</p>
+				<p>Het idee van de lezing was om technieken te laten zien die heel veel mensen in JavaScript doen, maar dat je die heel goed ook in HTML en CSS kan doen. De reden waarom je niet zo snel JS in wil springen is omdat je site meer moet laden als je JS gebruikt. Met een paar functies zal dat niet een groot probleem zijn, maar hoe groter je project wordt en hoe meer JS je toevoegd, kan het zeker oplopen tot een tragere website. Daarom is het een goede standaard om alles wat je kan doen in CSS ook echt daadwerkelijk in CSS te doen. De ironie van deze lezing is natuurlijk dat ik nog veel wil leren in JS, dus op een bepaalde manier is het niet handig voor mij om nòg minder JS te gebruiken. Maar zonder grapjes, dit was een extreem waardevolle lezing en je merkt gelijk dat Killian weet waar hij het over heeft en enorm veel passie heeft voor web development.</p>
+				<p>De twee technieken die mij het meest opvielen waren de dialogs en :has() selectors. De dialog sprak me aan want ik had geen idee dat dit mogelijk was zonder JS. Ik wist wel van een alert af, maar ik had geen idee dat je dus in principe je eigen alert kan maken en die stylen op de manier hoe jij wil. De :has() selector was ook verbazend voor mij. Hoe ik het begreep kan je dus checken of een element iets heeft en op basis daarvan iets laten gebeuren. Dat klinkt verdacht veel als een if else statement… Ik moet zelf nog meer researchen voor deze selector, maar dit lijkt me echt een enorm handige feature om te gebruiken.</p>
+				<p>Dus in conclusie, een enorm waardevolle lezing waar ik zeker wat aan heb gehad. Ondanks dat het wat uitliep en mijn concentratie aan het eind een beetje verloor, was het zeker een lezing die ik niet snel zal vergeten!</p>
+			</section>
+		</main>
+
+		<footer>
+			<p>blob</p>
+		</footer>
+	</body>
+</html>

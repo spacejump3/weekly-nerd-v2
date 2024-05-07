@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weekly nerd</title>
+		<link rel="stylesheet" href="styles/blog.css" />
+
+		<!-- google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="aboutme.html">About me</a></li>
+			</ul>
+		</header>
+
+		<main>
+			<details>
+				<summary>Options</summary>
+				<form>
+					<label>
+						<input id="animations" type="checkbox" />
+						Disable animations
+					</label>
+					<label>
+						<input id="light-dark-mode" type="checkbox" />
+						Dark mode
+					</label>
+				</form>
+			</details>
+
+			<section>
+				<h1>Jeremy Keith</h1>
+			</section>
+
+			<section>
+				<h2 id="gastspreker-5-jeremy-keith---14-3-2024">Gastspreker 5 Jeremy Keith - 14-3-2024</h2>
+				<p>Declarative Design</p>
+				<h2>Music</h2>
+				<p>Two different approaches:</p>
+				<ul>
+					<li><strong>Classical:</strong> A classical musician makes music using notes. It's very deliberate and specific</li>
+					<li><strong>Jazz:</strong> Much more improvised</li>
+				</ul>
+				<h2>Programming</h2>
+				<p>Two different approaches:</p>
+				<ul>
+					<li>Imperative programming: Give the computer instructions which it will then execute in order.</li>
+					<li>Declarative programming: You only declare the output and the computer will figure out how to get there. SQL is an example of this type of programming.</li>
+				</ul>
+				<p>HTML is declarative. This is because it is domain specific.</p>
+				<p>CSS is declarative. This is because every line you write in CSS is a suggestion.</p>
+				<p>Javascript is imperative. You are not bound to a specific vocabulary.</p>
+				<p>In declarative programming, if you make a mistake, the browser will ignore the mistake and continue with the rest of the code. In imperative programming if you make a single mistake, it will stop and give you an error.</p>
+				<p>Declarative languages can only be used in specific places and you have a lot more leeway if you make mistakes.</p>
+				<p>Imperative languages are able to be used in many places.</p>
+				<h2>Example of an imperative mindset:</h2>
+				<p>You could make an entirely functional button in JS, but you wouldn't do it because HTML gives it to you for free. So listen to this quote:</p>
+				<p>Javascript should only do what only javascript can do</p>
+				<p>Declarative programming could feel like giving up control beause you would give agency to the browser instead of yourself. Imperative programming is definitely more of the developer being in control.</p>
+				<h2>Declarative in CSS</h2>
+				<p>If using pixels instead of rems and padding-left instead of padding-inline-start, you would program a lot more imperative. You are then dictating what shows up on screen for the end user. If the user is using a language which reads from right to left or has a different standard font size the website would not show up correctly for the user.</p>
+				<p><a href="http://utopia.fyi">utopia.fyi</a></p>
+				<p>These days in CSS you have a lot of functions like calc(), clamp, min and max etc. which you could use to create great responsive designs. You shouldn't want to have complete control all the time, let the computer do the calculations. You should set the guard rails yourself and then let the browser do the rest of the work filling in the gaps.</p>
+					<p>Be the browser's mentor, not its micromanage</p>
+				<p><a href="http://buildexcellentwebsit.es">buildexcellentwebsit.es</a></p>
+				<p>Is declarative better than imperative? It depends…</p>
+				<ul>
+					<li>Culture: depending on the workspace culture, you could have a imperative culture (be here on time, perfect schedules) or more declarative (I don't care how you do it, but have this task done at the end of the week)</li>
+					<li>
+						Thinking:
+						<ul>
+							<li>Analytical thinking. Understand the whole by analysing the individual bits.</li>
+							<li>Systems thinking. Thinking more broadly and looking at the whole.</li>
+						</ul>
+					</li>
+					<li>Design systems: most design systems are more akin to analytical thinking.</li>
+				</ul>
+				<p>An imperative designer would style 3 buttons of the same family by declaring each color and style individually.</p>
+				<p>A declarative designer would say: the border should be 20% lighter than the background colour</p>
+				<p>It also depends on the medium. Things like print, native app and os-specific things you might want to use an imperative approach.</p>
+				<p>But on the world wide web, it is probably a safe bet that you should be thinking more declaratively.</p>
+				<p>Responsive design is more of a conversation with the user instead of dictating the user.</p>
+			</section>
+		</main>
+
+		<footer>
+			<p>blob</p>
+		</footer>
+	</body>
+</html>

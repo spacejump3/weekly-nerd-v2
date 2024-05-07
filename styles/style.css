@@ -1,0 +1,520 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --title: blue;
+    --bg: rgb(0, 0, 0);
+    --color: white;
+    --grey: grey;
+
+    --haze: rgb(34, 7, 43);
+}
+
+h1, h2, h3 {
+    font-family: 'Press Start 2P', system-ui;
+}
+
+p {
+    font-size: 1.2em;
+    color: var(--grey);
+}
+
+body {
+    font-family: monospace;
+
+    background-color: var(--bg);
+    color: var(--color);
+}
+
+/* Accesibility options */
+
+details {
+    background-color: rgb(36, 36, 36);
+    z-index: 2;
+    position: fixed;
+    display: inline;
+    right: 0;
+    width: max-content;
+    margin: 1em;
+    color: var(--grey);
+
+    summary {
+        background-color: #343434;
+        padding: .4em;
+
+        &:hover {
+            cursor: pointer;
+            color: var(--color);
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        color: var(--color);
+
+        label {
+            padding: .4em;
+        }
+
+        label:hover {
+            background-color: rgb(59, 59, 59);
+        }
+    }
+}
+
+#options-btn:checked .options {
+    top: 0;
+}
+
+/* =============== */
+/* ==[ Header ]=== */
+/* =============== */
+
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    font-size: 1.5em;
+
+    .currentPage {
+        text-decoration: underline;
+    }
+
+    ul {
+        list-style: none;
+        padding: 1em;
+        display: flex;
+        gap: 1em;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            color: blue;
+        }
+    }
+}
+
+/* ===================== */
+/* ==[ Title screen ]=== */
+/* ===================== */
+
+section:first-of-type {
+    height: 100vh;
+}
+
+main {
+    position: relative;
+
+    &:has(#animations:checked) {
+        section:first-of-type {
+            animation: none;
+
+            h1, h1::before, p {
+                animation: none;
+            }
+        }
+    }
+}
+
+section:first-of-type {
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    gap: 1em;
+    animation: stars 20s linear infinite;
+
+    h1 {
+        font-size: min(max(7vw, 2em), 7em);
+        text-transform: uppercase;
+        text-align: center;
+        align-self: end;
+        /* overflow: hidden; */
+        /* position: absolute; */
+        grid-row: 1;
+
+        display: flex;
+        flex-direction: column;
+        mix-blend-mode: screen;
+
+        color: var(--title);
+        animation: 
+            tracking 5s both linear, 
+            title-hue 15s infinite 5s linear;
+
+        /* star shine */
+        &::before {
+            content: '';
+
+            scale: 0;
+            position: absolute;
+            width: 2em;
+            aspect-ratio: 1;
+            top: -1em;
+            background-image: 
+                radial-gradient(circle at top left, black 40%, white 40%),
+                radial-gradient(circle at top right, black 40%, white 40%),
+                radial-gradient(circle at bottom left, black 40%, white 40%),
+                radial-gradient(circle at bottom right, black 40%, white 40%);
+
+            background-blend-mode: multiply;
+            animation: 
+                shine-right 10s linear infinite,
+                scale-rotate 2s step-end infinite;
+
+            mix-blend-mode: screen;
+
+            animation-delay: 5s;
+        }
+
+        /* &::after {
+            content: '';
+
+            scale: 0;
+            position: absolute;
+            width: 2em;
+            aspect-ratio: 1;
+            bottom: -1em;
+            background-image: 
+                radial-gradient(circle at top left, black 40%, white 40%),
+                radial-gradient(circle at top right, black 40%, white 40%),
+                radial-gradient(circle at bottom left, black 40%, white 40%),
+                radial-gradient(circle at bottom right, black 40%, white 40%);
+
+            background-blend-mode: multiply;
+            animation: 
+                shine-right 10s linear infinite,
+                scale-rotate 2s step-end infinite;
+
+            animation-direction: reverse;
+            mix-blend-mode: screen;
+
+            animation-delay: 5s;
+        } */
+
+        /* scanline */
+        /* &::after {
+            content: '';
+
+            position: absolute;
+
+            width: 100%;
+            height: .1em;
+            transform-origin: center;
+            background-color: transparent;
+            mix-blend-mode: screen;
+
+            animation: scanline .5s linear 5s both;
+        } */
+    }
+
+    span {
+        font-size: 50%;
+    }
+
+    p:first-of-type {
+        align-self: start;
+        grid-row: 2;
+        animation: 
+            appear 1s both 6s,
+            breathe 1s linear 7s infinite alternate;
+    }
+
+    /* stars
+    ------------------------------------- */
+    --gradient-size-small: 1px;
+    --gradient-size-medium: 2px;
+    --gradient-size-big: 6px;
+    --color-1: red;
+    --color-2: blue;
+    --color-3: lightblue;
+
+    background-image:
+        radial-gradient(circle at 5% 30%, var(--color-1) var(--gradient-size-small),#0000 var(--gradient-size-small)),
+        radial-gradient(circle at 15% 55%, var(--color-1) var(--gradient-size-small),#0000 var(--gradient-size-small)),
+        radial-gradient(circle at 25% 85%, var(--color-1) var(--gradient-size-medium),#0000 var(--gradient-size-small)),
+        radial-gradient(circle at 35% 65%, var(--color-1) var(--gradient-size-small),#0000 var(--gradient-size-small)),
+        radial-gradient(circle at 45% 35%, var(--color-1) var(--gradient-size-small),#0000 var(--gradient-size-small)),
+        radial-gradient(circle at 55% 95%, var(--color-1) var(--gradient-size-small),#0000 var(--gradient-size-small)),
+        radial-gradient(circle at 65% 15%, var(--color-1) var(--gradient-size-small),#0000 var(--gradient-size-small)),
+        radial-gradient(circle at 75% 75%, var(--color-1) var(--gradient-size-small),#0000 var(--gradient-size-small)),
+        radial-gradient(circle at 85% 85%, var(--color-1) var(--gradient-size-small),#0000 var(--gradient-size-small)),
+        radial-gradient(circle at 95% 55%, var(--color-1) var(--gradient-size-small),#0000 var(--gradient-size-small)),
+        
+        radial-gradient(circle at 2% 62%, var(--color-2) var(--gradient-size-medium),#0000 var(--gradient-size-small)),
+        radial-gradient(circle at 12% 12%, var(--color-3) var(--gradient-size-small),#0000 var(--gradient-size-small)),
+        radial-gradient(circle at 22% 42%, var(--color-2) var(--gradient-size-small),#0000 var(--gradient-size-small)),
+        radial-gradient(circle at 32% 22%, var(--color-3) var(--gradient-size-small),#0000 var(--gradient-size-small)),
+        radial-gradient(circle at 42% 72%, var(--color-2) var(--gradient-size-small),#0000 var(--gradient-size-small)),
+        radial-gradient(circle at 52% 32%, var(--color-3) var(--gradient-size-medium),#0000 var(--gradient-size-small)),
+        radial-gradient(circle at 62% 82%, var(--color-2) var(--gradient-size-small),#0000 var(--gradient-size-small)),
+        radial-gradient(circle at 72% 42%, var(--color-3) var(--gradient-size-small),#0000 var(--gradient-size-small)),
+        radial-gradient(circle at 82% 22%, var(--color-2) var(--gradient-size-small),#0000 var(--gradient-size-small)),
+        radial-gradient(circle at 92% 72%, var(--color-3) var(--gradient-size-small),#0000 var(--gradient-size-small)),
+        linear-gradient(to top, var(--bg) 10em, var(--haze));
+    
+    background-position: center center;
+}
+
+@keyframes tracking {
+    0% {
+        letter-spacing: 20em;
+        opacity: 0;
+        color: inherit;
+    }
+
+    20% {
+        letter-spacing: 20em;
+        opacity: 1;
+        color: inherit;
+    }
+
+    70% {
+        letter-spacing: 0;
+        color: inherit;
+        text-shadow: none;
+    }
+
+    70.1% {
+        color: red;
+        text-shadow: 0 0 1em;
+    }
+
+    100% {
+
+    }
+}
+
+@keyframes title-hue {
+    0% {
+        filter: hue-rotate(0deg) brightness(2);
+        text-shadow: 
+            0 0 1em,
+            .1em 0 0 #ff00ff,
+            -.1em 0 0 #ff00ff;
+    }
+
+    10% {
+        filter: hue-rotate(720deg);
+        text-shadow: none;
+    }
+
+    100% {
+        filter: hue-rotate(720deg);
+        text-shadow: none;
+    }
+}
+
+/* star animation */
+@keyframes shine-right {
+    0% {
+        transform: scale(0);
+    }
+
+    2.5% {
+        transform: scale(.5);
+    }
+
+    3% {
+        left: 0;
+    }
+
+    20% {
+        left: 80%;
+    }
+
+    21% {
+        transform: scale(.5);
+    }
+
+    25% {
+        left: 80%;
+        transform: scale(0);
+    }
+
+    100% {
+        left: 80%;
+        transform: scale(0);
+    }
+}
+
+@keyframes scale-rotate {
+    0% {
+        scale: 1;
+        rotate: 0deg;
+    }
+
+    25% {
+        scale: 2;
+        rotate: 45deg;
+    }
+
+    50% {
+        scale: 1;
+        rotate: 90deg;
+    }
+
+    75% {
+        scale: 2;
+        rotate: 135deg;
+    }
+
+    100% {
+        scale: 1;
+        rotate: 180deg;
+    }
+}
+
+@keyframes scanline {
+    0% {
+        top: -10%;
+        transform: scaleY(1);
+        background-color: transparent;
+    }
+
+    1% {
+        top: -10%;
+        transform: scaleY(1);
+        background-color: white;
+    }
+
+    99% {
+        top: 90%;
+        transform: scaleY(1);
+        background-color: white;
+    }
+
+    100% {
+        top: 90%;
+        transform: scaleY(1);
+        background-color: transparent;
+    }
+}
+
+/* subtitle animations */
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes breathe {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .5;
+    }
+}
+
+/* background animation */
+@keyframes stars {
+    from {
+        background-position: 0;
+    }
+    to {
+        background-position: 100vw;
+    }
+}
+
+/* ================= */
+/* ==[ Section 2 ]== */
+/* ================= */
+
+section:nth-of-type(2) {
+    background-color: #181818;
+    /* background-image: linear-gradient(var(--bg) 10%, var(--haze) 40%); */
+    background-image: linear-gradient(rgb(0, 0, 0), #181818 10%);
+    padding: 2em;
+
+    div {
+        max-width: 30em;
+        margin: auto;
+    }
+}
+
+section ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
+    gap: 1em;
+    list-style: none;
+    margin-top: 1em;
+    text-align: start;
+
+    /* portfolio items */
+    li {
+        aspect-ratio: 1;
+        /* border-bottom: solid 1px grey; */
+        box-shadow: inset 0 -1px 0 grey;
+        transition: .1s;
+
+        h3 {
+            font-size: 1em;
+            transition: .1s;
+            margin: .4em 0;
+        }
+
+        img {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+
+            transition: .1s;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            height: 100%;
+            display: block;
+            
+            &:focus {
+                outline: none;
+            }
+        }
+
+        /* hover state */
+        &:has(a:hover), &:has(a:focus-visible) {
+            --hover-color: yellow;
+            /* border-bottom: solid 5px var(--hover-color); */
+            box-shadow: inset 0 -5px 0 var(--hover-color);
+            /* animation: rainbow 2s infinite linear; */
+
+            h3 {
+                color: var(--hover-color);
+                text-decoration: underline;
+                font-size: 1.2em;
+                text-shadow: 0 0 1em var(--hover-color);
+
+                &:after {
+                    content: ' >';
+                }
+            }
+        }
+
+        /* focus state */
+        &:has(a:focus-visible) {
+            --focus-color: #ff000051;
+            outline: solid 2px var(--focus-color);
+            background-color: var(--focus-color);
+        }
+    }
+}
+
+@keyframes rainbow {
+    to {
+        filter: hue-rotate(360deg);
+    }
+}

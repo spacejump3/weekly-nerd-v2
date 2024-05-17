@@ -405,3 +405,45 @@ Circuit bending is het begin van de elektronische kunst / unstable media.
 Circuit bending is te vergelijken met inspect element. Eigenlijk kijk je naar iets wat bestaat (website) en kijk je hoe het werkt en je kan vanalles aanpassen wat erin zit.
 
 > De status-quo niet per definitie accepteren
+
+# Gastspreker Robert Spier - 15-5-2024
+
+Creative Technologist for the digital factory team at Deloitte NL.
+
+## Over ons
+Je kan best veel worden als CMDer. Alles wat gaat over mensen of design.
+
+Het is belangrijk om goed na te denken niet alleen waar je wil werken, maar wat je ook echt daadwerkelijk wil doen.
+
+## Wat hebben andere studenten gedaan?
+- Detachering (Een bedrijf dat je inzet bij andere bedrijven)
+- Traineeship
+- Freelance / designstudio
+- Full-service agency
+
+## Frameworks en libraries
+Het is belangrijk dat je de basis in ieder geval kent (HTML, CSS, JavaScript). Als je dit kan, kan je frameworks leren gebruiken. En als je één framework kan, kan je in principe alles leren.
+
+## Money
+Er is niet altijd een goed salaris. Er hangt af van je situatie, belasting die eraf gaat, wat je functie is, of je full of parttime werkt etc. Je zou samen moeten praten en discusseren.
+
+## Benefits
+- Reiskosten
+- Vakantiegeld
+- Pensioen
+- Conferenties
+- Auto van de zaak
+- etc
+
+Er is een balans te vinden tussen de benefits die je krijgt en het salaris wat je verdient.
+
+## De vibe
+Immaterial recognition
+
+## Conclusion
+- Discuss your benefits with classmates
+- Do your research
+- It's okay to say no to a company
+- Have fun and feel recognized at your job
+
+It's okay to fail. Build 10 average things instead of getting stuck on 1 thing to perfect.

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weekly nerd</title>
+		<link rel="stylesheet" href="styles/blog.css" />
+
+		<!-- google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="leerdoelen.html">Leerdoelen</a></li>
+				<li><a href="reflectie.html">Reflecties</a></li>
+			</ul>
+		</header>
+
+		<main>
+			<details>
+				<summary>Options</summary>
+				<form>
+					<label>
+						<input id="animations" type="checkbox" />
+						Disable animations
+					</label>
+					<label>
+						<input id="light-dark-mode" type="checkbox" />
+						Dark mode
+					</label>
+				</form>
+			</details>
+
+			<section>
+				<h2 class="super-title">Bramus van Damme</h2>
+			</section>
+
+			<section>
+				<h2>Bramus van Damme</h2>
+				<p>Scubadiver</p>
+				<h2>Same document view transitions</h2>
+				<p>Werkt nog niet in firefox 😟</p>
+				<p>“the view transition API gives you the power to create seamless visual transitions between two different views on your website”</p>
+				<p>Met de startViewTransition functie krijg je gratis een fade transition.</p>
+				<h2>Hoe werkt het?</h2>
+				<p>Zodra je een link klikt, word er een snapshot gemaakt van de huidige pagina. De volgende pagina wordt tegelijkertijd geladen onder de snapshot. Van de nieuwe pagina wordt ook een snapshot gemaakt en de twee snapshots worden onder elkaar gezet. Zodra dat allemaal klaar is word er een transitie gemaakt tussen de twee pagina’s.</p>
+				<p>Als je view transitions hebt, krijg je “view-transition-name: root;” in je user-agent stylesheet.</p>
+				<p>view-transition-old en view-transition-new zijn dan de snapshots van de pagina.</p>
+				<h2>Can I tweak the animations?</h2>
+				<p>Ja dat kan. Standaard krijg je fade-out en fade-in. Dit zijn eigenlijk gewoon CSS animations, dus je kan ook de standaard animation properties aanpassen. Je kan de duration veranderen, maar je kan ook keyframes toevoegen.</p>
+				<p>Je moet wel onthouden dat de snapshot letterlijk een afbeelding is. Je kan dus niet de kleuren van elementen veranderen.</p>
+				<p>De nieuwe view is wel een live representatie van de pagina, maar het is wel flattened.</p>
+				<p>Je kan ook elementen echt animeren (zoals de positie van een element aanpassen) als je die elementen een view-transition-name geeft.</p>
+				<p>Normaal gesproken kan je niet meer klikken terwijl een view transition gaande is. Je kan hier omheen door pointer-events none te gebruiken, maar dan skipt de animatie wel. Dat is dus wel waar nog aan gewerkt kan worden.</p>
+				<h2 id="all-together-now">All together now</h2>
+				<ol>
+					<li>
+						Identify and name <br>
+							Je hebt een overview en detail pagina. Zorg dat de elementen op zo’n logische manier zijn gemaakt zodat je logisch in de nieuwe pagina kan animeren. Welke elementen moeten verschuiven en vergroten, en welke elementen moeten verdwijden of tevoorschijn komen? Geef daarna een view-transition-name aan elk element die je wil animeren.
+					</li>
+					<li>Trigger view transition</li>
+					<li>Customize animations using CSS</li>
+				</ol>
+				<p><a href="https://developer.chrome.com/docs/web-platform/view-transitions/same-document">developer.chrome.com/docs/web-platform/view-transition</a></p>
+				<p>Je kan zelf aanpassen hoe de website animeert op basis van welke link je klikt (bijv. animatie van links naar rechts of andersom).</p>
+				<h2 id="cross-document-view-transitions">Cross document view transitions</h2>
+				<p>Alleen in Chrome 🤦</p>
+				<p>In principe hetzelfde als single page view transitions, maar net even wat anders. Details maken niet zoveel uit ;)</p>
+				<p>Hier staat alles in: <a href="https://developer.chrome.com/docs/web-platform/view-transitions">https://developer.chrome.com/docs/web-platform/view-transitions</a></p>
+
+				<h2>Korte reflectie</h2>
+				<p>Dit vond ik een hele coole weekly nerd. Deze nerd ging over een nieuwe CSS feature en de man die eraan heeft gewerkt heeft het gepresenteerd. Het ging over view transitions en hoe ze precies werken. Ik vond de voorbeelden die Bramus liet zien heel cool en ook de manier waarop het werkt vind ik geniaal. Het feit dat het 'gewoon' met snapshots werkt en dat tussen die twee snapshots de transition wordt gemaakt is super slim Ik ben enorm benieuwd naar deze feature en ik ga er zelf zeker mee experimenteren.</p>
+			</section>
+		</main>
+	</body>
+</html>

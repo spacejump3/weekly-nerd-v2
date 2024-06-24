@@ -13,7 +13,7 @@
     --haze: rgb(34, 7, 43);
 }
 
-h1, h2, h3 {
+h1, h2, h3, .super-title {
     font-family: 'Press Start 2P', system-ui;
 }
 
@@ -131,7 +131,7 @@ section:first-of-type {
     gap: 1em;
     animation: stars 20s linear infinite;
 
-    h1 {
+    h1, .super-title {
         font-size: min(max(7vw, 2em), 7em);
         text-transform: uppercase;
         text-align: center;
@@ -265,13 +265,13 @@ section:first-of-type {
 
 @keyframes tracking {
     0% {
-        letter-spacing: 20em;
+        letter-spacing: 1em;
         opacity: 0;
         color: inherit;
     }
 
     20% {
-        letter-spacing: 20em;
+        letter-spacing: 1em;
         opacity: 1;
         color: inherit;
     }
